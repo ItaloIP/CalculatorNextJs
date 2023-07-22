@@ -1,9 +1,22 @@
+ import { useState } from "react"
+
+ 
  export default function Home() {
+  let [visor, setVisor] = useState('')
+  function Numbers(props: string){
+    return(setVisor(visor += props))
+    
+  }
+  function Calculate(props: string){
+    // numero: number = () => (Numbers).toNumber
+    // if (props == 'x')
+  }
+
   return (
     <div className="bg-black w-[355px]  h-screen m-auto">
       <div className="flex flex-col  p-6 ">
       <div id="Visor" className="text-slate-50 text-6xl flex flex-row-reverse font-mono">
-        0
+        {visor}
       </div>
       <div className="">
         <div className="flex justify-between my-4">
@@ -21,13 +34,13 @@
           </button>
         </div>
         <div className="flex justify-between my-4">
-        <button className="bg-neutral-700 rounded-full text-center w-16 h-16 text-white font-semibold text-xl">
+        <button onClick={() => Numbers('7')} className="bg-neutral-700 rounded-full text-center w-16 h-16 text-white font-semibold text-xl">
             7
           </button>
-          <button className="bg-neutral-700 rounded-full text-center w-16 h-16 text-white font-semibold text-xl">
+          <button onClick={() => Numbers('8')} className="bg-neutral-700 rounded-full text-center w-16 h-16 text-white font-semibold text-xl">
             8
           </button>
-          <button className="bg-neutral-700 rounded-full text-center w-16 h-16 text-white font-semibold text-xl">
+          <button onClick={() => Numbers('9')} className="bg-neutral-700 rounded-full text-center w-16 h-16 text-white font-semibold text-xl">
             9
           </button>
           <button className="bg-orange-500 text-white rounded-full text-center w-16 h-16 font-semibold text-xl">
