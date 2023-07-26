@@ -4,8 +4,8 @@
  export default function Home() {
   let [visor, setVisor]:any  = useState('0')
   let [operator, setOperator]:any = useState('')
-  let [number1, setnumber1]:any = useState(0)
-  let [number2, setnumber2]:any = useState(0)
+  let [number1, setnumber1]:any = useState(null)
+  let [number2, setnumber2]:any = useState(null)
   
   function Numbers(props: string){
     if(visor == '0'){
